@@ -8,13 +8,16 @@ var pigLatin = []
 var pigLatin = function(sentence) {
   for (var i = 0; i < letters.length; i++) {
   var letter = letters[i];
+  for (var j = 0; j < vowels.length; i++) {
+    var vowel = vowels[j];
+  }
 console.log(sentence);
 console.log(letter);
-if (sentence === letter) {
-    console.log("true")
-    return true;
-  } else {
-    // return false;
+if (sentence === vowel) {
+  return 2;
+} else if (sentence === letter) {
+      console.log("true") 
+      return 1;
   }
 }
 };
