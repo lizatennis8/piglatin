@@ -11,12 +11,6 @@ var pigLatin = []
 
 
 
-
-
-
-
-
-
 // User/Front End Logic
 $(document).ready(function() {
   $("form#pig-latin").submit(function(event) {
@@ -26,6 +20,8 @@ $(document).ready(function() {
     // var result = pigLatin(sentence);
     var firstLetter = sentence.slice(0,1);
     console.log(firstLetter);
+    // var restofWord = sentence.shift();
+    // console.log(restofWord)
 
 
 
@@ -34,11 +30,22 @@ $(document).ready(function() {
       var vowel = vowels[i];
       if (firstLetter === vowel) {
         var result = sentence + "way";
-
-
         $("#pigresult").text(result);
-      } else {firstLetter === vowel
+      } else (firstLetter === vowel) 
+        var result = sentence + "noway";
+      for (var j = 0; j < cons.length; j++) {
+        var con = cons[j];
+        $("#pigresult").text(result);
+
+
+
+
+
+
       }
+
+
+
     }
   });
 });
