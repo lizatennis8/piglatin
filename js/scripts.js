@@ -17,58 +17,41 @@ var way = "way"
 // User/Front End Logic
 $(document).ready(function() {
   $("form#pig-latin").submit(function(event) {
-    event.preventDefault();
+      event.preventDefault();
 
-    var sentence = $("input#sentence").val().toLowerCase();
-    // var firstSentenceLetter = sentence.slice(0,1);
-    var arrayOfSingleWords = sentence.split(" ");
-    // console.log(arrayOfSingleWords);
+        var sentence = $("input#sentence").val().toLowerCase();
+        // var firstSentenceLetter = sentence.slice(0,1);
+        var arrayOfSingleWords = sentence.split(" ");
+        // console.log(arrayOfSingleWords);
 
-    arrayOfSingleWords.forEach(function(singleWord) {
-      var splitWord = singleWord.split("");
-      var firstLetter = singleWord.slice(0,1);
-      // console.log(firstLetter);
-      var useSingleWord = singleWord
-      // console.log(firstLetter);
+      arrayOfSingleWords.forEach(function(singleWord) {
+        var splitWord = singleWord.split("");
+        var firstLetter = singleWord.slice(0,1);
+        // console.log(firstLetter);
+        var useSingleWord = singleWord
+        // console.log(firstLetter);
 
+// vowel rules
 
-    vowels.forEach(function(vowel) {
+      vowels.forEach(function(vowel) {
 
+        if (sentence === ay) {
+         $("#pigresult").text(sentence);}
+        else if (firstLetter === vowel) {
+          $("#pigresult").text(sentence + "way");}
+        });
 
-if (sentence === ay || sentence === way) {
- $("#pigresult").text(sentence); }
+// consonant rules
 
-else if (firstLetter === vowel) {
-$("#pigresult").text(sentence + "way");
-}
+      cons.forEach(function(con) {
 
-// else if (firstLetter === con) {
-// $("pigresult").text(sentence + "dreamy");
-// }
-// console.log(vowel);
-});
-
-cons.forEach(function(con) {
-
-
-if (sentence === ay || sentence === way) {
-$("#pigresult").text(sentence); }
-
-// else if (firstLetter === vowel) {
-// $("#pigresult").text(sentence + "way");
-// }
-
-else if (firstLetter === con) {
-$("#pigresult").text(sentence + "dreamy");
-}
-// console.log(con);
-console.log(firstLetter);
-})
-
-
-
-})
-
+        if (sentence === way) {
+          $("#pigresult").text(sentence);
+        } else if (firstLetter === con) {
+          $("#pigresult").text(sentence + "dreamy");
+        }
+      })
+    })
   });
 });
 
