@@ -16,42 +16,40 @@ $(document).ready(function() {
   $("form#pig-latin").submit(function(event) {
     event.preventDefault();
 
-    var sentence = $("input#sentence").val();
-    // var result = pigLatin(sentence);
+    var sentence = $("input#sentence").val().toLowerCase();
     var firstLetter = sentence.slice(0,1);
-    console.log(firstLetter);
-    // var restofWord = sentence.shift();
-    // console.log(restofWord)
+    var singleWord = sentence.split(" ");
+    console.log(singleWord);
 
 
-
-    // var pigLatin = function(sentence) {
-    for (var i = 0; i < vowels.length; i++) {
-      var vowel = vowels[i];
-      if (firstLetter === vowel) {
-        var result = sentence + "way";
-        $("#pigresult").text(result);
-      } else (firstLetter === vowel) 
-        var result = sentence + "noway";
-      for (var j = 0; j < cons.length; j++) {
-        var con = cons[j];
-        $("#pigresult").text(result);
+if (sentence === "ay") {
+  $("#pigresult").text(sentence); }
+ else if (sentence === sentence) {
+  $("#pigresult").text(sentence);
+}
 
 
 
 
 
 
-      }
 
-
-
-    }
   });
 });
-
 
 // for (var j = 0; j < vowels.length; i++) {
 //   var vowel = vowels[j];
 
 // console.log("true")
+
+// // var pigLatin = function(sentence) {
+// for (var i = 0; i < vowels.length; i++) {
+//   var vowel = vowels[i];
+//   if (firstLetter === vowel) {
+//     var result = sentence + "way";
+//     $("#pigresult").text(result);
+//   } else (firstLetter === vowel)
+//     var result = sentence + "noway";
+//   for (var j = 0; j < cons.length; j++) {
+//     var con = cons[j];
+//     $("#pigresult").text(result);
