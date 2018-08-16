@@ -28,29 +28,46 @@ $(document).ready(function() {
       var splitWord = singleWord.split("");
       var firstLetter = singleWord.slice(0,1);
       // console.log(firstLetter);
+      var useSingleWord = singleWord
+      // console.log(firstLetter);
 
-      for (var i = 0; i < vowels.length; i++) {
-        var vowel = vowels[0]};
 
-if
+    vowels.forEach(function(vowel) {
 
-(firstLetter === vowel) {
-$("#pigresult").text(sentence + "test");
+
+if (sentence === ay || sentence === way) {
+ $("#pigresult").text(sentence); }
+
+else if (firstLetter === vowel) {
+$("#pigresult").text(sentence + "way");
 }
 
-else if (sentence === ay || sentence === way) {
- $("#pigresult").text(sentence + "n"); }
+// else if (firstLetter === con) {
+// $("pigresult").text(sentence + "dreamy");
+// }
+// console.log(vowel);
+});
 
-else if (sentence === sentence) {
-$("#pigresult").text("(no rule applied)");
+cons.forEach(function(con) {
+
+
+if (sentence === ay || sentence === way) {
+$("#pigresult").text(sentence); }
+
+// else if (firstLetter === vowel) {
+// $("#pigresult").text(sentence + "way");
+// }
+
+else if (firstLetter === con) {
+$("#pigresult").text(sentence + "dreamy");
 }
+// console.log(con);
 console.log(firstLetter);
-  })
+})
 
 
 
-
-
+})
 
   });
 });
@@ -71,3 +88,8 @@ console.log(firstLetter);
 //   for (var j = 0; j < cons.length; j++) {
 //     var con = cons[j];
 //     $("#pigresult").text(result);
+
+// for loop format - not working though
+// })
+//   for (var i = 0; i < vowels.length; i++) {
+//     var vowel = vowels[i];}
