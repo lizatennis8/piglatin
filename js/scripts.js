@@ -9,8 +9,10 @@ var pigLatin = []
 var ay = "ay"
 var way = "way"
 
+// for (var i = 0; i < vowels.length; i++) {
+//   var vowel = vowels[0];};}
 
-
+// console.log(ifVowel);}
 
 // User/Front End Logic
 $(document).ready(function() {
@@ -25,20 +27,25 @@ $(document).ready(function() {
     arrayOfSingleWords.forEach(function(singleWord) {
       var splitWord = singleWord.split("");
       var firstLetter = singleWord.slice(0,1);
-      console.log(firstLetter);
-    })
+      // console.log(firstLetter);
 
-if (sentence === "art") {
-$("#pigresult").text(sentence + "test"); }
+      for (var i = 0; i < vowels.length; i++) {
+        var vowel = vowels[0]};
+
+if
+
+(firstLetter === vowel) {
+$("#pigresult").text(sentence + "test");
+}
 
 else if (sentence === ay || sentence === way) {
  $("#pigresult").text(sentence + "n"); }
 
- else if (sentence === sentence) {
-  $("#pigresult").text("(no rule applied)");
+else if (sentence === sentence) {
+$("#pigresult").text("(no rule applied)");
 }
-
-
+console.log(firstLetter);
+  })
 
 
 
