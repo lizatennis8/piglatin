@@ -6,7 +6,8 @@ var vowels = ["a", "e", "i", "o", "u"]
 var cons = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
 var pigLatin = []
 
-
+var ay = "ay"
+var way = "way"
 
 
 
@@ -27,12 +28,16 @@ $(document).ready(function() {
       console.log(firstLetter);
     })
 
+if (sentence === "art") {
+$("#pigresult").text(sentence + "test"); }
 
-if (sentence === "ay") {
-  $("#pigresult").text(sentence); }
+else if (sentence === ay || sentence === way) {
+ $("#pigresult").text(sentence + "n"); }
+
  else if (sentence === sentence) {
-  $("#pigresult").text(sentence);
+  $("#pigresult").text("(no rule applied)");
 }
+
 
 
 
