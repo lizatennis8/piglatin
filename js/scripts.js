@@ -18,8 +18,13 @@ $(document).ready(function() {
 
     var sentence = $("input#sentence").val().toLowerCase();
     var firstLetter = sentence.slice(0,1);
-    var singleWord = sentence.split(" ");
-    console.log(singleWord);
+    var arrayOfSingleWords = sentence.split(" ");
+    // console.log(arrayOfSingleWords);
+
+    arrayOfSingleWords.forEach(function(singleWord) {
+      var splitWord = singleWord.split("");
+      console.log(splitWord);
+    })
 
 
 if (sentence === "ay") {
