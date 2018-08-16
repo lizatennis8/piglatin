@@ -17,13 +17,14 @@ $(document).ready(function() {
     event.preventDefault();
 
     var sentence = $("input#sentence").val().toLowerCase();
-    var firstLetter = sentence.slice(0,1);
+    // var firstSentenceLetter = sentence.slice(0,1);
     var arrayOfSingleWords = sentence.split(" ");
     // console.log(arrayOfSingleWords);
 
     arrayOfSingleWords.forEach(function(singleWord) {
       var splitWord = singleWord.split("");
-      console.log(splitWord);
+      var firstLetter = singleWord.slice(0,1);
+      console.log(firstLetter);
     })
 
 
